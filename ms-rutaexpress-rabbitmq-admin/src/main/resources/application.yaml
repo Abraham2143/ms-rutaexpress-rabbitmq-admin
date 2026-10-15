@@ -13,8 +13,7 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: https://login.microsoftonline.com/${86277ca6-e8ef-4000-96b5-190477b8912d:86277ca6-e8ef-4000-96b5-190477b8912d}/v2.0
-
+          issuer-uri: https://login.microsoftonline.com/86277ca6-e8ef-4000-96b5-190477b8912d/v2.0
 rutaexpress:
   rabbit:
     exchanges:
