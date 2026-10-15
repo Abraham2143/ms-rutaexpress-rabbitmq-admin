@@ -1,3 +1,47 @@
+server:
+  port: 8087
+
 spring:
   application:
     name: ms-rutaexpress-rabbitmq-admin
+  rabbitmq:
+    host: ${RABBIT_HOST:localhost}
+    port: ${RABBIT_PORT:5672}
+    username: ${RABBIT_USER:guest}
+    password: ${RABBIT_PASS:guest}
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://login.microsoftonline.com/${86277ca6-e8ef-4000-96b5-190477b8912d:86277ca6-e8ef-4000-96b5-190477b8912d}/v2.0
+
+rutaexpress:
+  rabbit:
+    exchanges:
+      direct: cmd.direct
+      topic: cmd.topic
+      dead: cmd.dead.dlx
+    email:
+      queue: q.cmd.email
+      dlq: q.cmd.email.dlq
+      direct-key: email.send
+      topic-key: "email.*"
+      dlq-key: email.dlq
+    warehouse:
+      queue: q.cmd.warehouse
+      dlq: q.cmd.warehouse.dlq
+      direct-key: warehouse.ticket
+      topic-key: "warehouse.#"
+      dlq-key: warehouse.dlq
+    label:
+      queue: q.cmd.label
+      dlq: q.cmd.label.dlq
+      direct-key: label.gen
+      topic-key: "label.*"
+      dlq-key: label.dlq
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
