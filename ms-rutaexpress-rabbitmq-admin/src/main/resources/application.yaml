@@ -5,7 +5,7 @@ spring:
   application:
     name: ms-rutaexpress-rabbitmq-admin
   rabbitmq:
-    host: ${RABBIT_HOST:localhost}
+    host: ${RABBIT_HOST:3.238.4.32}
     port: ${RABBIT_PORT:5672}
     username: ${RABBIT_USER:guest}
     password: ${RABBIT_PASS:guest}
