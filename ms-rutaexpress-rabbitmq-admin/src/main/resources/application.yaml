@@ -7,8 +7,8 @@ spring:
   rabbitmq:
     host: ${RABBIT_HOST:3.238.4.32}
     port: ${RABBIT_PORT:5672}
-    username: ${RABBIT_USER:guest}
-    password: ${RABBIT_PASS:guest}
+    username: ${RABBIT_USER:rutaexpress_app}
+    password: ${RABBIT_PASS:bSkUodyp54EZSqpBiztmordd+uAJXoXQ}
   security:
     oauth2:
       resourceserver:

@@ -8,5 +8,5 @@ services:
     environment:
       - RABBIT_HOST=3.238.4.32
       - RABBIT_PORT=5672
-      - RABBIT_USER=guest
-      - RABBIT_PASS=guest
+      - RABBIT_USER=rutaexpress_app
+      - RABBIT_PASS=bSkUodyp54EZSqpBiztmordd+uAJXoXQ
